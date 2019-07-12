@@ -1,16 +1,20 @@
-import React, { Component } from 'react'
-import EmployeeList from "./employee/EmployeeList"  // Import EmployeeList component
-import LocationList from "./LocationList"
+import React, { Component } from "react"
+import NavBar from "./nav/NavBar"
+import ApplicationViews from "./ApplicationViews"
+
+import "./Kennel.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 
-export default class Kennel extends Component {
+class Kennel extends Component {
     render() {
         return (
-            <div>
-                <h3>Student Kennels</h3>
-                <LocationList />
-                <EmployeeList />
-            </div>
-        );
+            <React.Fragment>
+                <NavBar />
+                <ApplicationViews />
+            </React.Fragment>
+        )
     }
 }
+
+export default Kennel
